@@ -413,8 +413,8 @@
 }
 
 /* ===================== Capa 3D (tilt-to-flat no scroll) — artigo ===================== */
-.cover-stage{perspective:900px;margin:52px 0 34px}
-.cover-3d{transform-origin:center bottom;will-change:transform;border-radius:26px;background:var(--espresso2);padding:10px;
+.cover-stage{perspective:900px;margin:28px 0 34px}
+.cover-3d{transform-origin:center top;will-change:transform;border-radius:26px;background:var(--espresso2);padding:10px;
   box-shadow:0 9px 20px rgba(42,33,28,.20),0 37px 37px rgba(42,33,28,.12),0 84px 50px rgba(42,33,28,.06),0 149px 60px rgba(42,33,28,.03)}
 .cover-3d .article-cover{margin:0;height:420px;border-radius:18px}
 @media(max-width:560px){.cover-3d .article-cover{height:260px}.cover-stage{perspective:800px}}

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notícias — NEAB Unicamp</title>
-<meta name="description" content="Notícias, chamadas, eventos e atividades do Núcleo de Estudos Afro-Brasileiros da Unicamp.">
+<title>Pesquisa & Extensão — NEAB Unicamp</title>
+<meta name="description" content="Linhas de pesquisa e projetos do NEAB Unicamp sobre a população afro-brasileira.">
 <link rel="icon" type="image/png" href="neab.png">
 <link rel="apple-touch-icon" href="neab.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,9 +28,16 @@
   <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1"/><path d="M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></symbol>
 </svg>
 
-<!-- NAVBAR -->
 <header>
   <nav class="navbar" aria-label="Navegação principal">
     <a class="unicamp-seal" href="https://www.unicamp.br" aria-label="Universidade Estadual de Campinas"><img src="unicamp-logo.png" alt="Unicamp"></a>
@@ -74,7 +81,6 @@
   </nav>
 </header>
 
-<!-- Sheet mobile -->
 <div class="overlay" id="overlay"></div>
 <aside class="sheet" id="sheet" aria-label="Menu" aria-hidden="true">
   <div class="sheet-head">
@@ -93,47 +99,28 @@
         <a href="o-nucleo.html#documentos"><span class="ic"><svg width="18" height="18"><use href="#i-file"/></svg></span>Documentos</a>
       </div>
     </div>
+    <div class="acc">
+      <button class="acc-trigger">Pesquisa &amp; Extensão <svg class="chev"><use href="#i-chev"/></svg></button>
+      <div class="acc-panel">
+        <a href="pesquisa.html#linhas"><span class="ic"><svg width="18" height="18"><use href="#i-search"/></svg></span>Linhas de pesquisa</a>
+        <a href="pesquisa.html#projetos"><span class="ic"><svg width="18" height="18"><use href="#i-folder"/></svg></span>Projetos</a>
+      </div>
+    </div>
     <a class="sheet-link" href="eventos.html">Atividades</a>
+    <div class="acc">
+      <button class="acc-trigger">Acervo <svg class="chev"><use href="#i-chev"/></svg></button>
+      <div class="acc-panel">
+        <a href="acervo.html#publicacoes"><span class="ic"><svg width="18" height="18"><use href="#i-book"/></svg></span>Publicações</a>
+        <a href="acervo.html#videos"><span class="ic"><svg width="18" height="18"><use href="#i-video"/></svg></span>Vídeos</a>
+      </div>
+    </div>
     <a class="sheet-link" href="noticias.html">Notícias</a>
   </div>
   <div class="sheet-cta"><a class="btn btn-primary" href="contato.html" style="width:100%;justify-content:center">Contato</a></div>
 </aside>
 
 <main id="main">
-  <section class="page-header">
-    <div class="wrap">
-      <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><i>/</i>Notícias</nav>
-      <h1>Notícias</h1>
-      <p class="intro">Chamadas, eventos e atividades do núcleo. Acompanhe o que acontece no NEAB.</p>
-    </div>
-  </section>
-
-  <section class="content-section" style="padding-top:8px">
-    <div class="wrap">
-      <div class="filters">
-        <button class="chip active">Todas</button>
-        <button class="chip">Eventos</button>
-        <button class="chip">Oportunidades</button>
-        <button class="chip">Institucional</button>
-      </div>
-
-      <div class="post-grid">
-        <article class="pcard glass"><a class="cover" href="noticia.html" aria-label="Chamada para Pesquisador Pq"></a><div class="thumb" aria-hidden="true"></div><div class="body"><div class="meta"><span class="tag">Oportunidade</span><span>20 mai 2026</span></div><h3><span>Chamada para Pesquisador(a) Pq — inscrições abertas</span></h3><p>Concurso público para a carreira de pesquisador do núcleo.</p></div></article>
-        <article class="pcard glass"><a class="cover" href="noticia.html" aria-label="Semana Negra do IFCH"></a><div class="thumb" aria-hidden="true"></div><div class="body"><div class="meta"><span class="tag">Evento</span><span>28 mai 2026</span></div><h3><span>1ª Semana Negra do IFCH: Conexão África–Brasil</span></h3><p>Filosofias africanas e afrodiaspóricas em mesas e comunicações.</p></div></article>
-        <article class="pcard glass"><a class="cover" href="noticia.html" aria-label="Visita do deputado Orlando Silva"></a><div class="thumb" aria-hidden="true"></div><div class="body"><div class="meta"><span class="tag">Institucional</span><span>12 mai 2026</span></div><h3><span>NEAB recebe o deputado federal Orlando Silva</span></h3><p>Debate sobre a universidade e a maioria da população.</p></div></article>
-        <article class="pcard glass"><a class="cover" href="noticia.html" aria-label="Oficina de Dança Afro"></a><div class="thumb" aria-hidden="true"></div><div class="body"><div class="meta"><span class="tag">Evento</span><span>29 mai 2026</span></div><h3><span>Oficina de Dança Afro e Percussão com Isabely Mota</span></h3><p>Encontros às segundas e sextas, abertos à comunidade.</p></div></article>
-        <article class="pcard glass"><a class="cover" href="noticia.html" aria-label="Dia de África"></a><div class="thumb" aria-hidden="true"></div><div class="body"><div class="meta"><span class="tag">Evento</span><span>25 mai 2026</span></div><h3><span>Dia de África: Epicentro do Conhecimento</span></h3><p>Mesa-redonda no auditório da COCEN.</p></div></article>
-        <article class="pcard glass"><a class="cover" href="noticia.html" aria-label="NEXUS PPI"></a><div class="thumb" aria-hidden="true"></div><div class="body"><div class="meta"><span class="tag">Institucional</span><span>05 mai 2026</span></div><h3><span>NEXUS PPI: protagonismo preto, pardo e indígena na pesquisa</span></h3><p>Programa de apoio à formação de pesquisadores.</p></div></article>
-      </div>
-
-      <nav class="pagination" aria-label="Paginação">
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#" aria-label="Próxima página"><svg width="18" height="18"><use href="#i-arrow"/></svg></a>
-      </nav>
-    </div>
-  </section>
+<section class="page-header"><div class="wrap"><nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><i>/</i>Pesquisa &amp; Extensão</nav><h1>Pesquisa &amp; Extensão</h1><p class="intro">As linhas de pesquisa e os projetos do núcleo sobre a população afro-brasileira, as relações étnico-raciais e as políticas públicas.</p><nav class="subnav" aria-label="Seções desta página"><a href="#linhas">Linhas de pesquisa</a><a href="#projetos">Projetos</a></nav></div></section><section class="content-section" id="linhas"><div class="wrap"><span class="sec-eyebrow">Linhas de pesquisa</span><h2>Seis eixos em construção</h2><p class="body">O núcleo é novo e suas linhas estão em formação. Estes são os eixos que orientam a pesquisa hoje.</p><div class="cards3"><article class="icard glass"><div class="ic"><svg width="22" height="22"><use href="#i-compass"/></svg></div><h3>Relações étnico-raciais e racismo</h3><p>Estudos sobre desigualdade racial, identidade e discriminação no Brasil.</p></article><article class="icard glass"><div class="ic"><svg width="22" height="22"><use href="#i-users"/></svg></div><h3>Ações afirmativas e educação</h3><p>Acesso, permanência e políticas de cotas na universidade pública.</p></article><article class="icard glass"><div class="ic"><svg width="22" height="22"><use href="#i-info"/></svg></div><h3>Saúde da população negra</h3><p>Equidade no cuidado e determinantes raciais em saúde.</p></article><article class="icard glass"><div class="ic"><svg width="22" height="22"><use href="#i-book"/></svg></div><h3>Cultura, religiosidade e ancestralidade</h3><p>Tradições afro-brasileiras, memória e patrimônio.</p></article><article class="icard glass"><div class="ic"><svg width="22" height="22"><use href="#i-flask"/></svg></div><h3>Tecnologia e protagonismo PPI</h3><p>Inovação e protagonismo preto, pardo e indígena na ciência.</p></article><article class="icard glass"><div class="ic"><svg width="22" height="22"><use href="#i-clock"/></svg></div><h3>História e memória afro-brasileira</h3><p>Trajetórias, arquivos e narrativas da diáspora africana.</p></article></div></div></section><section class="content-section" id="projetos"><div class="wrap"><span class="sec-eyebrow">Projetos</span><h2>Projetos em andamento</h2><div class="rowlist"><div class="rowitem glass"><span class="ic"><svg width="22" height="22"><use href="#i-folder"/></svg></span><div class="rinfo"><strong>Mapeamento das ações afirmativas na Unicamp</strong><p>Levantamento e análise das políticas de cotas e permanência estudantil.</p><div class="tags"><span class="rtag">Ações afirmativas · Em andamento</span></div></div></div><div class="rowitem glass"><span class="ic"><svg width="22" height="22"><use href="#i-folder"/></svg></span><div class="rinfo"><strong>Memórias negras de Campinas</strong><p>Projeto de extensão que registra histórias da população negra da região.</p><div class="tags"><span class="rtag">Extensão · Em andamento</span></div></div></div><div class="rowitem glass"><span class="ic"><svg width="22" height="22"><use href="#i-folder"/></svg></span><div class="rinfo"><strong>Saúde e raça: indicadores no SUS</strong><p>Estudo sobre desigualdades raciais no acesso à saúde pública.</p><div class="tags"><span class="rtag">Saúde · Em andamento</span></div></div></div></div></div></section><section class="content-section"><div class="wrap"><div class="cta-band"><div><span class="eyebrow">Pesquisa &amp; Extensão</span><h2 class="serif">Quer propor uma pesquisa ou parceria?</h2><p>O NEAB recebe propostas de projetos e colaborações.</p></div><a class="btn btn-on" href="contato.html">Falar com o núcleo <svg class="ar" width="17" height="17"><use href="#i-arrow"/></svg></a></div></div></section>
 </main>
 
 <footer>
@@ -144,8 +131,8 @@
         <p>Núcleo de Estudos Afro-Brasileiros da Universidade Estadual de Campinas.</p>
       </div>
       <div><h4>O Núcleo</h4><a href="o-nucleo.html#quem-somos">Quem somos</a><a href="o-nucleo.html#equipe">Coordenação e equipe</a><a href="o-nucleo.html#historia">História</a><a href="o-nucleo.html#documentos">Documentos</a></div>
-      <div><h4>Atividades</h4><a href="pesquisa.html">Pesquisa &amp; Extensão</a><a href="index.html#destaques">Eventos</a><a href="noticias.html">Notícias</a><a href="acervo.html">Acervo</a></div>
-      <div><h4>Contato</h4><a href="#">Av. Erico Veríssimo, 500 — Unicamp</a><a href="mailto:neab@unicamp.br">neab@unicamp.br</a><a href="tel:+551935214753">(19) 3521-4753</a><a href="https://instagram.com/neab_unicamp">@neab_unicamp</a></div>
+      <div><h4>Atividades</h4><a href="pesquisa.html">Pesquisa &amp; Extensão</a><a href="eventos.html">Eventos</a><a href="noticias.html">Notícias</a><a href="acervo.html">Acervo</a></div>
+      <div><h4>Contato</h4><a href="contato.html">Av. Erico Veríssimo, 500 — Unicamp</a><a href="mailto:neab@unicamp.br">neab@unicamp.br</a><a href="tel:+551935214753">(19) 3521-4753</a><a href="https://instagram.com/neab_unicamp">@neab_unicamp</a></div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 NEAB · Núcleo de Estudos Afro-Brasileiros</span>
@@ -161,8 +148,6 @@
   openB.addEventListener('click',openSheet);closeB.addEventListener('click',closeSheet);overlay.addEventListener('click',closeSheet);
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
   document.querySelectorAll('.acc-trigger').forEach(t=>t.addEventListener('click',()=>t.parentElement.classList.toggle('open')));
-  // filtros (visual, sem lógica de dados no mockup)
-  document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));c.classList.add('active');}));
 </script>
 </body>
 </html>

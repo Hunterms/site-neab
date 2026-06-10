@@ -118,7 +118,7 @@
           </div>
         </header>
 
-        <div class="article-cover"><img src="img/h1.jpg" alt="Roda de pessoas em encontro cultural afro-brasileiro"></div>
+        <div class="cover-stage"><div class="cover-3d"><div class="article-cover"><img src="img/h1.jpg" alt="Roda de pessoas em encontro cultural afro-brasileiro"></div></div></div>
 
         <div class="article-body">
           <p>De 28 a 31 de maio, o Instituto de Filosofia e Ciências Humanas (IFCH) recebe a 1ª Semana Negra, organizada em parceria com o NEAB. A programação reúne mesas, comunicações e oficinas sobre filosofias africanas e afrodiaspóricas, com pesquisadoras e pesquisadores de várias universidades.</p>
@@ -177,6 +177,25 @@
   openB.addEventListener('click',openSheet);closeB.addEventListener('click',closeSheet);overlay.addEventListener('click',closeSheet);
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
   document.querySelectorAll('.acc-trigger').forEach(t=>t.addEventListener('click',()=>t.parentElement.classList.toggle('open')));
+
+  // Capa 3D: começa inclinada e deita conforme entra na viewport
+  (function(){
+    const stage=document.querySelector('.cover-stage');if(!stage)return;
+    const card=stage.querySelector('.cover-3d');
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){card.style.transform='none';return;}
+    let ticking=false;
+    function update(){
+      ticking=false;
+      // progresso pelo scroll: capa começa bem inclinada no topo e deita ao rolar ~380px
+      let p=Math.min(1,Math.max(0,window.scrollY/380));
+      const rot=(1-p)*22,sc=1+(1-p)*0.05;
+      card.style.transform='rotateX('+rot.toFixed(2)+'deg) scale('+sc.toFixed(3)+')';
+    }
+    function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update);}}
+    update();
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',update);
+  })();
 </script>
 </body>
 </html>

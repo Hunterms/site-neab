@@ -45,13 +45,10 @@
   .btn:hover .ar{transform:translateX(3px)}
 
   /* ---------- Navbar full-width (formal) ---------- */
-  /* sem backdrop-filter no header: senão ele vira o "root" do backdrop e mata o blur
-     dos dropdowns (que ficam pendurados abaixo dele). Header fica quase opaco. */
-  header{position:sticky;top:0;z-index:80;border-bottom:1px solid var(--border)}
-  /* blur só na barra (pseudo-elemento) — assim o header NÃO vira backdrop-root e o blur
-     dos dropdowns (pendurados abaixo da barra) continua funcionando */
-  header::before{content:"";position:absolute;inset:0;z-index:0;background:rgba(250,245,236,.8);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
-  .navbar{position:relative;z-index:1;display:flex;align-items:center;gap:4px;height:72px;max-width:1120px;margin:0 auto;padding:0 24px}
+  /* barra quase opaca + blur direto no header: cobre o conteúdo que rola por baixo
+     (sem vazamento) e ainda dá o efeito de vidro. Dropdowns são sólidos (abaixo). */
+  body > header{position:sticky;top:0;z-index:80;background:rgba(250,245,236,.92);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-bottom:1px solid var(--border)}
+  .navbar{position:relative;display:flex;align-items:center;gap:4px;height:72px;max-width:1120px;margin:0 auto;padding:0 24px}
   .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem}
   .unicamp-seal{display:flex;align-items:center;margin-right:12px;padding-right:14px;border-right:1px solid var(--border)}
   .unicamp-seal img{height:38px;width:auto;display:block}
@@ -64,7 +61,7 @@
   .has-drop:hover .chev,.has-drop:focus-within .chev{transform:rotate(180deg)}
   .nav-cta{margin-left:4px}
 
-  .dropdown{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);width:330px;background:var(--glass-strong);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--glass-border);border-radius:16px;box-shadow:var(--shadow-hi);padding:8px;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
+  .dropdown{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);width:330px;background:#FCFAF5;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-hi);padding:8px;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
   .has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
   .drop-item{display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:11px;transition:background .2s}
   .drop-item:hover{background:rgba(158,43,37,.07)}
@@ -414,3 +411,16 @@
   .cards3,.cards2,.media-grid{grid-template-columns:1fr}
   .cform .row2{grid-template-columns:1fr}
 }
+
+/* ===================== Capa 3D (tilt-to-flat no scroll) — artigo ===================== */
+.cover-stage{perspective:900px;margin:52px 0 34px}
+.cover-3d{transform-origin:center bottom;will-change:transform;border-radius:26px;background:var(--espresso2);padding:10px;
+  box-shadow:0 9px 20px rgba(42,33,28,.20),0 37px 37px rgba(42,33,28,.12),0 84px 50px rgba(42,33,28,.06),0 149px 60px rgba(42,33,28,.03)}
+.cover-3d .article-cover{margin:0;height:420px;border-radius:18px}
+@media(max-width:560px){.cover-3d .article-cover{height:260px}.cover-stage{perspective:800px}}
+@media(prefers-reduced-motion:reduce){.cover-3d{transform:none!important}}
+
+/* agenda agrupada por mês (escala p/ muitos eventos) */
+.ag-month{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--primary);margin:26px 0 2px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.ag-month:first-child{margin-top:0}
+.ag-empty{color:var(--muted);font-size:.92rem;padding:6px 2px}
